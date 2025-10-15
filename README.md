@@ -5,7 +5,7 @@ This guide will help you get started with the VIIV Design project. It’s writte
 ---
 
 ## What is This?
-VIIV Design is a simple front-end template using HTML, CSS, and JavaScript. You don’t need anything special to use it—just open the files and go.
+VIIV Design is a simple front-end template using HTML, CSS, and JavaScript. You don’t need anything special to use it just open the files and go.
 
 ---
 
