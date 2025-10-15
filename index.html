@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Inbenta Search</title>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <script defer src="https://sdk.inbenta.io/search/2.0.4/inbenta-search-sdk.js"></script>
+  <script defer src="assets/js/viiv-search.js"></script>
+
+  <style>
+    .search-box {
+      display: flex;
+      gap: .5rem;
+      margin-bottom: 1rem;
+    }
+
+    .search-box input {
+      flex: 1;
+      padding: .5rem .75rem;
+    }
+
+    .section {
+      margin: 1rem 0;
+    }
+
+    .section h3 {
+      margin: .25rem 0 .5rem;
+    }
+
+    .inbenta-search-results {
+      border: 1px solid #ddd;
+      padding: .75rem;
+      border-radius: .5rem;
+    }
+
+    .item__link {
+      text-decoration: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="viiv-shell">
+    <div class="viiv-container">
+      <main class="viiv-main">
+
+        <div class="reference-inbenta-search-box">
+          <div class="component-content">
+
+          
+            <div class="search-box">
+              <div class="search_div">
+                <label for="valuetext" class="hidden">Search</label>
+                <button id="buttonsearch" class="form__button inbenta-search-button inbenta-search-icon dtsearchbtn"
+                  aria-label="Search Button">
+                  <span class="hidden">Search</span>
+                </button>
+                <input id="valuetext" type="search" placeholder="Search" aria-label="Search">
+              </div>
+            </div>
+
+          
+
+            <div id="ai-answer" class="inbenta-search-results"></div>
+          
+
+            
+            <div id="r1" style="display:none;">
+              <h5 class="section_title">Medical Information Database Results</h5>
+              <div id="results" class="inbenta-search-results"></div>
+              <div id="no-results1" class="inbenta-search-no-results"></div>
+            </div>
+
+            <div id="r2" style="display:none;">
+              <h5 class="section_title">Website & Document Results</h5>
+              <div id="results2" class="inbenta-search-results"></div>
+              <div id="no-results2" class="inbenta-search-no-results"></div>
+            </div>
+
+          
+            <div id="loader"></div>
+
+          </div>
+        </div>
+
+      </main>
+
+      <aside class="viiv-aside">
+        <section class="sidebar-card msl-card">
+          <h3 class="sidebar-title">My MSL</h3>
+          <p class="sidebar-desc">Enter zip code to find your MSL contact.</p>
+          <form class="msl-form" novalidate>
+            <label class="msl-label" for="zipcode">Zip code</label>
+            <div class="msl-input-row">
+              <input class="msl-input" type="text" id="zipcode" placeholder="Zip code" aria-label="Zipcode" />
+              <button class="msl-button" type="submit" aria-label="Find liaison by ZIP code"></button>
+            </div>
+          </form>
+        </section>
+
+        <section class="sidebar-card cta-card">
+          <h3 class="sidebar-title">Visit Our HIV Medicines</h3>
+          <p class="sidebar-desc">Find Medical Information organized by product.</p>
+          <a href="https://viivhcmedinfo.com/our-hiv-medicines/" target="_self"
+            class="trapezoid-button trapezoid-button--primary" aria-label="Explore now">
+            <span class="trapezoid-button__rectangle">Explore now</span>
+            <span class="trapezoid-button__right-rectangle" aria-hidden="true"></span>
+          </a>
+        </section>
+
+        <div id="ai-sources" style="display:none"></div>
+      </aside>
+    </div>
+  </div>
+</body>
+
+</html>
