@@ -39,6 +39,19 @@ This project includes a search that looks for answers in documents and product d
 
 The code that handles search and AI is in `assets/js/viiv-search.js`. You can change what it does there if needed.
 
+### Gen AI API Key and Domain Key (For Development)
+To use or modify the Gen AI search features, you may need the following keys (found in the JS file):
+
+- Domain Key: 
+  
+  `eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJwcm9qZWN0IjoiY2xuX3ZpaXZfZ2VuX2FpX3YyXzkwNDFfc2VhcmNoX2VuIiwiZG9tYWluX2tleV9pZCI6IkJqN19qTTFFRVlwMTZEMm9EaUFlUHc6OiJ9.kCsSaC86c1zKthnP7y9f47yGVtQLQxp0o-zh5gEDHd0ed-ETqWNEhs1wVhsWqk3ZirwyztnZuxdxSMNViegKIw`
+
+- API Key: 
+  
+  `BjmTFARIct6Ih8RUhfg2+9rPKRSK26kcnSa6KJuHl3s=`
+
+These are required for running and developing the Gen AI features in development environment. Do not share them publicly outside the project team.
+
 ---
 
 ## For Beginners
