@@ -34,10 +34,22 @@ viiv-design/
 
 ---
 
-## How the Search and Gen AI Work
-This project includes a search that looks for answers in documents and product data. If you allow it, the AI assistant also tries to give a short, helpful summary above the regular results, and shows which sources it used. Your original question is sent to the AI service; nothing else personal is sent.
+## How the Search Features Work
+This project includes several search features to help you find information quickly:
 
-The code that handles search and AI is in `assets/js/viiv-search.js`. You can change what it does there if needed.
+### Search and Gen AI
+The search looks for answers in documents and product data. If you allow it, the AI assistant also tries to give a short, helpful summary above the regular results, and shows which sources it used. Your original question is sent to the AI service; nothing else personal is sent.
+
+### Autocompleter (Search Suggestions)
+As you type in the search box, you'll see a dropdown list of suggested results that match what you're typing. This helps you find what you need faster. The suggestions appear automatically and disappear when you:
+- Press Enter to search
+- Click the Search button
+- Click outside the search box
+
+### Refinement Tabs
+After you search, you'll see tabs above the results (like "All", "full-letter", "infographic", "video", "congress-presentation"). These let you filter results by type, so if you only want to see videos or infographics, just click that tab. The "All" tab shows everything.
+
+The code that handles search, AI, autocompleter, and tabs is in `assets/js/viiv-search.js`. Styling for these features is in `assets/css/styles.css`. You can change how they work or look by editing these files.
 
 ### Gen AI API Key and Domain Key (For Development)
 To use or modify the Gen AI search features, you may need the following keys (found in the JS file):
@@ -51,6 +63,27 @@ To use or modify the Gen AI search features, you may need the following keys (fo
   `BjmTFARIct6Ih8RUhfg2+9rPKRSK26kcnSa6KJuHl3s=`
 
 These are required for running and developing the Gen AI features in development environment. Do not share them publicly outside the project team.
+
+### Customizing Search Features
+
+**Autocompleter Settings** (in `viiv-search.js`):
+- `maxResults: 8` - How many suggestions to show (change the number to show more or fewer)
+- `preload: true` - Whether suggestions are ready immediately or load when you start typing
+- `showViewAllButton: false` - Set to `true` if you want a "View All" button at the bottom of suggestions
+
+**Refinement Tabs Settings** (in `viiv-search.js`):
+The tabs are set up in the code around line 478-505. You can add or remove content types by editing the `tabs` array. For example:
+```javascript
+tabs: [
+  { facetValue: "_all" },           // Shows everything
+  { facetValue: "full-letter" },    // Full letters/documents
+  { facetValue: "infographic" },    // Infographics
+  { facetValue: "video" },          // Videos
+  { facetValue: "congress-presentation" }, // Presentations
+]
+```
+
+To add a new tab, just add a line like `{ facetValue: "your-content-type" }` to the list.
 
 ---
 
