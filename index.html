@@ -31,7 +31,6 @@
 
     .inbenta-search-results {
       border: 1px solid #ddd;
-      padding: .75rem;
       border-radius: .5rem;
     }
 
@@ -48,8 +47,6 @@
 
         <div class="reference-inbenta-search-box">
           <div class="component-content">
-
-          
             <div class="search-box">
               <div class="search_div">
                 <label for="valuetext" class="hidden">Search</label>
@@ -57,25 +54,28 @@
                   aria-label="Search Button">
                   <span class="hidden">Search</span>
                 </button>
-                <input id="valuetext" type="search" placeholder="Search" aria-label="Search">
+                <input id="valuetext" type="search" placeholder="Search" aria-label="Search">      
               </div>
+              <div id="autocompleter"></div>
             </div>
-
-          
 
             <div id="ai-answer" class="inbenta-search-results"></div>
           
 
             
             <div id="r1" style="display:none;">
+              <div id="tabs-db"></div>
               <h5 class="section_title">Medical Information Database Results</h5>
               <div id="results" class="inbenta-search-results"></div>
+              <div id="pagination-db" class="inbenta-search-pagination"></div>
               <div id="no-results1" class="inbenta-search-no-results"></div>
             </div>
 
             <div id="r2" style="display:none;">
-              <h5 class="section_title">Website & Document Results</h5>
+              <h5 class="section_title">Sitewide Results</h5>
+              <div  id="tabs-web"></div>
               <div id="results2" class="inbenta-search-results"></div>
+              <div id="pagination-web" class="inbenta-search-pagination"></div>
               <div id="no-results2" class="inbenta-search-no-results"></div>
             </div>
 
